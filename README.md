@@ -109,19 +109,21 @@ Simple discord-style chat with E2EE encryption =)
 📂 Структура проекта 
 ```
 BEZOPAS_CHAT_3.0/
-├── run.py
-├── config.py
-├── requirements.txt
-├── LICENSE
-├── bezopasnichat/
-│   ├── __init__.py
-│   ├── crypto_utils.py
-│   └── events.py
-├── static/
-│   ├── style.css
-│   └── client.js
-└── templates/
-    └── index.html
+│
+├──BEZOPAS_CHAT_END/
+  ├── run.py
+  ├── config.py
+  ├── requirements.txt
+  ├── LICENSE
+  ├── bezopasnichat/
+  │   ├── __init__.py
+  │   ├── crypto_utils.py
+  │   └── events.py
+  ├── static/
+  │   ├── style.css
+  │   └── client.js
+  └── templates/
+      └── index.html
 ```
 
 ## 🤝 Вклад
