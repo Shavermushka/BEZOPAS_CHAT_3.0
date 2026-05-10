@@ -55,8 +55,8 @@ Simple discord-style chat with E2EE encryption =)
 
 1. **Склонируйте репозиторий**
    ```bash
-   git clone https://github.com/Shavermushka/BezopasniChat.git
-   cd BezopasniChat
+   git clone https://github.com/Shavermushka/BEZOPAS_CHAT_3.0.git
+   cd BEZOPAS_CHAT_3.0
    ```
 
 2. **Создайте виртуальное окружение и активируйте его**
@@ -82,7 +82,9 @@ Simple discord-style chat with E2EE encryption =)
 
 ## 📸 Скриншоты
 
-_Здесь могут быть скриншоты интерфейса (добавьте позже)_
+![Uploading Scrin1.png…]()  ![Uploading Scrin2.png…]()
+
+
 
 ---
 
