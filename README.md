@@ -108,7 +108,7 @@ Simple discord-style chat with E2EE encryption =)
 ```
 📂 Структура проекта 
 ```
-BezopasniChat/
+BEZOPAS_CHAT_3.0/
 ├── run.py
 ├── config.py
 ├── requirements.txt
