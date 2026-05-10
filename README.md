@@ -82,7 +82,8 @@ Simple discord-style chat with E2EE encryption =)
 
 ## 📸 Скриншоты
 
-![Uploading Scrin1.png…]()  ![Uploading Scrin2.png…]()
+![Uploading Scrin1.png…](/home/fero/Загрузки/Scrin1.png)
+
 
 
 
