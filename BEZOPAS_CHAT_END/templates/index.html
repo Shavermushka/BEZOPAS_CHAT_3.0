@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BezopasniChat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Экран входа -->
+    <div id="login-screen" class="login-screen">
+        <h1><i class="fas fa-comments"></i> MessengerProsto</h1>
+        <input type="text" id="username-input" class="login-input" placeholder="Имя пользователя" maxlength="20">
+        <input type="password" id="password-input" class="login-input" placeholder="Пароль">
+        <button class="login-btn" onclick="login()">Войти</button>
+        <button class="login-btn btn-green" onclick="register()">Регистрация</button>
+        <div id="error-message" class="error-message"></div>
+        <div id="success-message" class="success-message"></div>
+    </div>
+    
+    <!-- Основной интерфейс -->
+    <div id="main-interface" class="container hidden">
+        <div class="sidebar">
+            <div class="logo">
+                <h1>MessengerProsto</h1>
+                <div class="user-info">
+                    <div id="current-user-display">Вы: ...</div>
+                    <div class="user-id">ID: <span id="current-user-id">000000</span></div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <button class="login-btn btn-green" onclick="showCreateChatModal()" style="width: 100%; margin-bottom: 10px;">
+                    <i class="fas fa-plus"></i> Приватный чат
+                </button>
+                <button class="login-btn btn-purple" onclick="showCreateGroupModal()" style="width: 100%;">
+                    <i class="fas fa-users"></i> Создать группу
+                </button>
+            </div>
+            
+            <div class="section">
+                <h3><i class="fas fa-hashtag"></i> Публичные каналы</h3>
+                <div id="public-channels"></div>
+            </div>
+            <div class="section">
+                <h3><i class="fas fa-lock"></i> Приватные чаты</h3>
+                <div id="private-channels"></div>
+            </div>
+            <div class="section">
+                <h3><i class="fas fa-users"></i> Группы</h3>
+                <div id="group-channels"></div>
+            </div>
+            <div class="section">
+                <h3><i class="fas fa-users"></i> Онлайн (<span id="online-count">0</span>)</h3>
+                <div id="online-users" class="user-list"></div>
+            </div>
+        </div>
+        
+        <div class="main-area">
+            <div class="chat-header">
+                <div>
+                    <h2 id="current-channel">Выберите канал</h2>
+                    <div class="chat-info" id="channel-info"></div>
+                </div>
+                <div class="chat-actions">
+                    <button class="login-btn btn-orange" id="clear-history-btn" onclick="clearHistory()" style="padding: 10px 20px; display: none;">
+                        <i class="fas fa-trash"></i> Очистить историю
+                    </button>
+                    <button class="login-btn btn-red" style="padding: 10px 20px;" onclick="logout()">
+                        <i class="fas fa-sign-out-alt"></i> Выйти
+                    </button>
+                </div>
+            </div>
+            
+            <div id="messages-container" class="messages-container">
+                <div style="text-align: center; color: #999; padding: 40px;">
+                    <i class="fas fa-comments" style="font-size: 48px; margin-bottom: 20px;"></i>
+                    <h3>Добро пожаловать в MessengerProsto!</h3>
+                    <p>Выберите канал слева, чтобы начать общение</p>
+                </div>
+            </div>
+            
+            <div class="input-area">
+                <div class="input-container">
+                    <textarea id="message-input" placeholder="Напишите сообщение..." rows="1" onkeydown="handleKeyDown(event)" disabled></textarea>
+                    <button id="send-btn" onclick="sendMessage()" disabled><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Модальные окна (без изменений) -->
+    <div id="create-chat-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2 class="modal-title"><i class="fas fa-user-plus"></i> Создать приватный чат</h2>
+            <p style="margin-bottom: 15px; color: #999;">Введите ID пользователя</p>
+            <input type="text" id="invite-user-id" class="modal-input" placeholder="ID пользователя (6 цифр)" maxlength="6">
+            <div class="modal-buttons">
+                <button class="login-btn btn-green" onclick="createPrivateChat()">Создать</button>
+                <button class="login-btn btn-red" onclick="hideCreateChatModal()">Отмена</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="create-group-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2 class="modal-title"><i class="fas fa-users"></i> Создать группу</h2>
+            <input type="text" id="group-name" class="modal-input" placeholder="Название группы" maxlength="20">
+            <textarea id="group-members" class="modal-input" placeholder="ID участников через запятую (6 цифр каждый)" rows="3"></textarea>
+            <div class="modal-buttons">
+                <button class="login-btn btn-purple" onclick="createGroup()">Создать</button>
+                <button class="login-btn btn-red" onclick="hideCreateGroupModal()">Отмена</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="edit-message-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2 class="modal-title"><i class="fas fa-edit"></i> Редактировать сообщение</h2>
+            <textarea id="edit-message-text" class="modal-input" rows="3" placeholder="Введите новый текст сообщения"></textarea>
+            <div class="modal-buttons">
+                <button class="login-btn btn-green" onclick="saveEditedMessage()">Сохранить</button>
+                <button class="login-btn btn-red" onclick="hideEditModal()">Отмена</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.0/socket.io.min.js"></script>
+    <script src="{{ url_for('static', filename='client.js') }}"></script>
+</body>
+</html>

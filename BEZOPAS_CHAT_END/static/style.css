@@ -1,0 +1,84 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+body { background: #1a1a1a; color: #fff; height: 100vh; display: flex; justify-content: center; align-items: center; padding: 20px; }
+.container { width: 100%; max-width: 1200px; height: 95vh; background: #2d2d2d; border-radius: 10px; overflow: hidden; display: flex; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+.sidebar { width: 250px; background: #252525; padding: 20px; overflow-y: auto; }
+.logo { text-align: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #444; }
+.logo h1 { font-size: 24px; color: #7289da; margin-bottom: 5px; }
+.logo p { color: #999; font-size: 14px; }
+.user-info { text-align: center; margin-bottom: 20px; padding: 10px; background: #363636; border-radius: 5px; }
+.user-id { font-size: 12px; color: #43b581; margin-top: 5px; }
+.section { margin-bottom: 25px; }
+.section h3 { color: #888; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+.channel { padding: 10px; margin: 5px 0; border-radius: 5px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; transition: background 0.2s; }
+.channel:hover { background: #363636; }
+.channel.active { background: #363636; border-left: 3px solid #7289da; }
+.channel-icon { margin-right: 10px; font-size: 18px; }
+.channel-private { color: #f04747; }
+.channel-group { color: #faa61a; }
+.channel-actions { display: flex; gap: 5px; }
+.channel-btn { background: none; border: none; color: #999; cursor: pointer; padding: 2px 5px; border-radius: 3px; font-size: 12px; }
+.channel-btn:hover { background: #40444b; }
+.user-list { margin-top: 20px; }
+.user-item { padding: 8px; margin: 3px 0; border-radius: 5px; display: flex; align-items: center; justify-content: space-between; }
+.user-status { width: 8px; height: 8px; border-radius: 50%; margin-right: 10px; }
+.user-status.online { background: #43b581; }
+.user-status.offline { background: #747f8d; }
+.user-id-badge { font-size: 10px; background: #7289da; padding: 2px 6px; border-radius: 10px; color: white; }
+.main-area { flex: 1; display: flex; flex-direction: column; }
+.chat-header { padding: 20px; background: #363636; border-bottom: 1px solid #444; display: flex; justify-content: space-between; align-items: center; }
+.chat-header h2 { font-size: 18px; }
+.chat-info { color: #999; font-size: 14px; }
+.chat-actions { display: flex; gap: 10px; }
+.messages-container { flex: 1; padding: 20px; overflow-y: auto; background: #2d2d2d; }
+.message { margin-bottom: 20px; padding: 10px; border-radius: 5px; background: #363636; position: relative; }
+.message:hover { background: #3a3a3a; }
+.message.system { background: #3a3a3a; border-left: 3px solid #7289da; }
+.message.private { background: #3a2e3a; border-left: 3px solid #f04747; }
+.message.group { background: #3a3a2e; border-left: 3px solid #faa61a; }
+.message-header { display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 14px; }
+.message-username { font-weight: bold; color: #7289da; }
+.message.system .message-username { color: #f04747; }
+.message.private .message-username { color: #ff73fd; }
+.message.group .message-username { color: #ffcc00; }
+.message-time { color: #999; font-size: 12px; }
+.message-text { line-height: 1.4; word-wrap: break-word; padding-right: 30px; }
+.message-edited { font-size: 11px; color: #999; font-style: italic; margin-left: 5px; }
+.message-actions { position: absolute; top: 5px; right: 5px; display: none; gap: 5px; }
+.message:hover .message-actions { display: flex; }
+.message-btn { background: #40444b; border: none; color: #fff; cursor: pointer; padding: 3px 6px; border-radius: 3px; font-size: 11px; }
+.message-btn:hover { background: #7289da; }
+.message-btn.delete { background: #f04747; }
+.message-btn.delete:hover { background: #d84040; }
+.input-area { padding: 20px; background: #363636; border-top: 1px solid #444; }
+.input-container { display: flex; gap: 10px; }
+#message-input { flex: 1; padding: 15px; background: #40444b; border: none; border-radius: 5px; color: white; font-size: 16px; resize: none; min-height: 50px; max-height: 150px; }
+#message-input:focus { outline: none; }
+#message-input:disabled { opacity: 0.5; cursor: not-allowed; }
+#send-btn { padding: 0 25px; background: #7289da; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; transition: background 0.2s; }
+#send-btn:hover { background: #677bc4; }
+#send-btn:disabled { background: #4a4f5c; cursor: not-allowed; }
+.login-screen { width: 100%; max-width: 400px; background: #2d2d2d; padding: 40px; border-radius: 10px; text-align: center; }
+.login-screen h1 { color: #7289da; margin-bottom: 30px; }
+.login-input { width: 100%; padding: 15px; margin-bottom: 15px; background: #40444b; border: none; border-radius: 5px; color: white; font-size: 16px; }
+.login-btn { width: 100%; padding: 15px; background: #7289da; color: white; border: none; border-radius: 5px; font-size: 16px; font-weight: bold; cursor: pointer; margin-bottom: 10px; }
+.login-btn:hover { background: #677bc4; }
+.btn-green { background: #43b581 !important; }
+.btn-green:hover { background: #3ca374 !important; }
+.btn-red { background: #f04747 !important; }
+.btn-red:hover { background: #d84040 !important; }
+.btn-orange { background: #faa61a !important; }
+.btn-orange:hover { background: #e69518 !important; }
+.btn-purple { background: #9b59b6 !important; }
+.btn-purple:hover { background: #8e44ad !important; }
+.error-message { color: #f04747; margin-top: 10px; font-size: 14px; }
+.success-message { color: #43b581; margin-top: 10px; font-size: 14px; }
+.hidden { display: none !important; }
+.modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: flex; justify-content: center; align-items: center; z-index: 1000; }
+.modal-content { background: #2d2d2d; padding: 30px; border-radius: 10px; width: 90%; max-width: 400px; }
+.modal-title { margin-bottom: 20px; color: #7289da; }
+.modal-input { width: 100%; padding: 12px; margin-bottom: 15px; background: #40444b; border: none; border-radius: 5px; color: white; font-size: 16px; }
+.modal-buttons { display: flex; gap: 10px; margin-top: 20px; }
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #2d2d2d; }
+::-webkit-scrollbar-thumb { background: #202225; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #40444b; }
