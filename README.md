@@ -57,6 +57,7 @@ Simple discord-style chat with E2EE encryption =)
    ```bash
    git clone https://github.com/Shavermushka/BEZOPAS_CHAT_3.0.git
    cd BEZOPAS_CHAT_3.0
+   cd BEZOPAS_CHAT_END
    ```
 
 2. **Создайте виртуальное окружение и активируйте его**
