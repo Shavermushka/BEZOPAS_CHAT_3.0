@@ -92,7 +92,7 @@ Simple discord-style chat with E2EE encryption =)
 | Фамилия, Имя                      | GitHub (если есть)                                    | Роль |
 |-----------------------------------|-------------------------------------------------------|------|
 | **Шинкаренко Егор Вадимович**     | [Shavermushka](https://github.com/Shavermushka)      | Full‑stack разработка, криптография, архитектура |
-| **Сыпачев Дмитрий Константинович** | –                                                     | Backend, тестирование |
+| **Сыпачев Дмитрий Константинович** | [dmitriysypachev6-coder](https://github.com/dmitriysypachev6-coder)                                                    | Backend, тестирование |
 | **Иванченко Кирилл Александрович** | [kerikkkk](https://github.com/kerikkkk)                                                     | Frontend, UI/UX дизайн |
 
 ---
