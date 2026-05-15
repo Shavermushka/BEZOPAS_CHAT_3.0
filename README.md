@@ -7,7 +7,7 @@ Simple discord-style chat with E2EE encryption =)
 **BezopasniChat** – безопасный мессенджер реального времени с **end‑to‑end шифрованием**.  
 Совмещает интерфейс в стиле **Discord** и надёжность **Telegram**, но с полной конфиденциальностью: сервер никогда не видит ваши сообщения.
 
-[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-EF9421?style=flat-square&logo=creativecommons&logoColor=white&labelColor=333333)](https://creativecommons.org/licenses/by-nc/4.0/)
 ![Python](https://img.shields.io/badge/Python-3.12%2B-FFD43B?style=flat-square&logo=python&logoColor=white&labelColor=3776AB)
 
 ---
