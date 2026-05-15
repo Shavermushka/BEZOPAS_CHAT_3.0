@@ -106,9 +106,9 @@ Simple discord-style chat with E2EE encryption =)
 Этот проект распространяется под лицензией **Creative Commons Attribution‑NonCommercial 4.0 International (CC BY‑NC 4.0)**.  
 Полный текст лицензии доступен в файле [LICENSE](LICENSE).
 
-```
 Пример атрибуции, которую необходимо разместить при использовании кода:
-«Часть кода основана на проекте BezopasniChat, созданном Шинкаренко Е. В., Сыпачевым Д. К., Иванченко К. А. (GitHub).»
+```
+«Часть кода основана на проекте BezopasniChat, созданном [Shavermushka](https://github.com/Shavermushka)., [dmitriysypachev6-coder](https://github.com/dmitriysypachev6-coder)., [kerikkkk](https://github.com/kerikkkk).»
 ```
 Это гарантирует, что ваш вклад останется бесплатным и открытым навсегда.
 
