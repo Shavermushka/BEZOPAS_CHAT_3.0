@@ -8,7 +8,7 @@ Simple discord-style chat with E2EE encryption =)
 Совмещает интерфейс в стиле **Discord** и надёжность **Telegram**, но с полной конфиденциальностью: сервер никогда не видит ваши сообщения.
 
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
-![Python](https://img.shields.io/badge/Python-3.14-3776AB?style=flat&logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.14%2B-3776AB?style=flat&logo=python&logoColor=white)
 
 ---
 
