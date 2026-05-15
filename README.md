@@ -83,7 +83,7 @@ Simple discord-style chat with E2EE encryption =)
 
 ## 📸 Скриншоты
 
-
+![](https://github.com/Shavermushka/BEZOPAS_CHAT_3.0/blob/main/Scrin1.png)
 
 ---
 
