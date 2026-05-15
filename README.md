@@ -89,7 +89,7 @@ Simple discord-style chat with E2EE encryption =)
 
 ## 👥 Авторы
 
-| Фамилия, Имя                      | GitHub (если есть)                                    | Роль |
+| Фамилия, Имя                      | GitHub                                     | Роль |
 |-----------------------------------|-------------------------------------------------------|------|
 | **Шинкаренко Егор Вадимович**     | [Shavermushka](https://github.com/Shavermushka)      | Full‑stack разработка, криптография, архитектура |
 | **Сыпачев Дмитрий Константинович** | [dmitriysypachev6-coder](https://github.com/dmitriysypachev6-coder)                                                    | Backend, тестирование |
