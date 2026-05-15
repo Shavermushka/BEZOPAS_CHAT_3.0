@@ -87,6 +87,10 @@ Simple discord-style chat with E2EE encryption =)
 
 ---
 
+![](https://github.com/Shavermushka/BEZOPAS_CHAT_3.0/blob/main/Scrin2.png)
+
+---
+
 ## 👥 Авторы
 
 | Фамилия, Имя                      | GitHub                                     | Роль |
